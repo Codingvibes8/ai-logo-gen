@@ -1,18 +1,22 @@
-export default[
+
+
+
+
+
+
+const LogoDesigns = [
+    {
+        title: 'Cartoon Logo',
+        image: '/design_1.png',
+        prompt: 'Create a set of vibrant, playful logo designs featuring cartoon-style characters with puns or witty text...'
+    },
+    {
+        title: 'App Logo',
+        image: '/design_2.png',
+        prompt: 'Create a vibrant and playful 3D logo for an app...'
+    },
     {
         //chatGpt
-        title:'Cartoon Logo',
-        image:'/design_1.png',
-        prompt:'Create a set of vibrant, playful logo designs featuring cartoon-style characters with puns or witty text. Each logo should include a cute anthropomorphic object, animal, or food item with expressive features like sunglasses, hats, or smiles, combined with a short, pun-based slogan. Use bold colors, clean lines, and retro aesthetics, ensuring the design is eye-catching and cheerful. Place each logo against a dark background to make the colors pop'
-    },
-    {
-               //chatGpt
-        title:'App Logo',
-        image:'/design_2.png',
-        prompt:'Create a vibrant and playful 3D logo for an app. The design should feature bold, colorful text with a glossy finish. Include an icon relevant to the apps theme above the text and a background that complements the concept, such as a bright outdoor scene with natural elements like green grass, a blue sky, and fluffy white clouds. Use a rounded square frame with a yellow border and subtle shadows for a polished and inviting look'
-    },
-    {
-               //chatGpt
         title:'Modern Mascot Logos',
         image:'/design_3.png',
         prompt:'A vibrant logo featuring a friendly, animated character with a playful expression. The character is dressed in a classic uniform, complete with a distinctive accessory that adds personality. In one hand, they hold a signature item that represents the brand, while the other elements of the design—such as small decorative touches or natural accents—enhance the overall look. The background consists of a bold, circular design with subtle accents to highlight the character. Below, the brand name is displayed in bold, stylized lettering, with a slight curve and complementary decorative lines. The overall style is fun, welcoming, and full of character.'
@@ -48,4 +52,6 @@ export default[
         image:'/design_9.png',
         prompt:'Design a collection of vintage-inspired logos with a hand-drawn, artistic style. Incorporate a variety of themes, including food, animals, characters, and unique brand elements. Each logo should feature bold typography, intricate details, and a retro aesthetic that is versatile and suitable for diverse brands or businesses.'
     }
-]
+];
+
+export default LogoDesigns;

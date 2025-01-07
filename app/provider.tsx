@@ -1,22 +1,18 @@
 
 
+"use client";
+import React, { ReactNode } from "react";
+import { Header } from "./_components/Header";
 
-"use client"
-import React from 'react'
-import {Header} from './_components/Header'
-
-
-
-
-function Provider({children}:{children:React.ReactNode}) {
+const Provider: React.FC<{ children: ReactNode }> = ({ children }) => {
     return (
-             <div>
-                    <Header/>
-                    <div className='px-10 lg:px-32 xl:px-48 2xl:px-56'>
-                        {children}
-                    </div>
-                </div>
-    )
-}
+        <div>
+            <Header />
+            <div className="px-10 lg:px-32 xl:px-48 2xl:px-56">
+                {children}
+            </div>
+        </div>
+    );
+};
 
-export default Provider
+export default Provider;
