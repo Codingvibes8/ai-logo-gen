@@ -17,8 +17,8 @@ const Hero: React.FC = () => {
         <div className='flex items-center mt-20 flex-col gap-5 min-h-screen'>
             <div className='bg-blue-200 p-12 rounded-3xl'>
                 <Link href={'/'} className="flex items-center gap-1">
-                    <Image src={'/logo-maker.svg'} alt='logo' width={30} height={30} className={'rotate-90'} />
-                    <span className="text-red-950 font-serif font-extrabold text-2xl">PicGen</span>
+                    <Image src={'/green-tech.svg'} alt='logo' width={40} height={40} className={'rotate-90'} />
+                    <span className="text-red-950 font-serif font-extrabold text-2xl">Pix<span className='text-amber-700'>Gen</span></span>
                 </Link>
                 <h2 className='text-gray-700 text-5xl text-center font-bold mb-4'>{Lookup.HeroHeading}</h2>
                 <h2 className='text-4xl text-gray-700 text-center font-bold mb-4'>{Lookup.HeroSubheading}</h2>

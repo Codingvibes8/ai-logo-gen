@@ -1,34 +1,29 @@
-import {db} from '@/configs/FirebaseConfig'
-
-import {doc} from 'firebase/firestore';
-import {getDoc, setDoc, serverTimestamp} from 'firebase/firestore'; 
+import { db } from '@/configs/FirebaseConfig'
+import { doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function Post(req){
-    const {userEmail,userName}  = await req.json()
-try {
-    //does user exist
-    const docRef=doc(db, "users", userEmail);
-    const docSnap = await getDoc(docRef);
+export async function post(req: NextRequest) {
+    const { userEmail, userName } = await req.json();
 
-    if (docSnap.exists()) {
-        return NextRequest.json(docSnap.data());,
-          } else {
-            //insert new user;
-const data={name: userName, email: userEmail, credits:5,};
+    try {
+        // Does user exist
+        const docRef = doc(db, "users", userEmail);
+        const docSnap = await getDoc(docRef);
 
-            await setDoc(doc(db, "users", userEmail), {
-                name: userName,
-                email: userEmail,
-                credits: 5,
-    });
-   NextResponse.json(data);
+        if (docSnap.exists()) {
+            return NextResponse.json(docSnap.data());
+        } else {
+            // Insert new user
+            const data = { name: userName, email: userEmail, credits: 5, timestamp: serverTimestamp() };
+
+            await setDoc(doc(db, "users", userEmail), data);
+            return NextResponse.json(data);
+        }
+    } catch (error) {
+        return new Response(JSON.stringify(error), {
+            status: 500,
+        });
     }
+}
 
-   
-} catch (error) {
-    return new Response(JSON.stringify(error), {
-        status: 500,
-      });
 
-}}
