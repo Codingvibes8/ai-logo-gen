@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import HeadingDesc from './HeadingDesc'
 import Lookup from '@/app/_data/Lookup'
-
+import  LogoDesign  from '@/app/_data/LogoDesign'
 import Image from 'next/image'
 
 interface LogoDesignsProps {
@@ -22,7 +22,7 @@ const LogoDesigns: React.FC<LogoDesignsProps> = ({ onHandleInputChange, formData
       />
 
       <div className='grid grid-cols-2 md:grid-cols-3 gap-10 mt-10'>
-        {LogoDesigns.map((design: { title: string; image: string }, index: number) => (
+        {LogoDesign.map((design: { title: string; image: string }, index: number) => (
           <div key={index}
           onClick={() => {
             setSelectedOption(design.title);
@@ -31,7 +31,7 @@ const LogoDesigns: React.FC<LogoDesignsProps> = ({ onHandleInputChange, formData
           
           className={clsx(
             'p-1 hover:border-2 border-primary rounded-xl cursor-pointer',
-            selectedOption === design.title && 'border-2 rounded-xl border-primary'
+            { 'border-2 rounded-xl border-primary': selectedOption === design.title }
           )}>
               <Image src={design.image} alt={design.title} width={300}
                height={200}

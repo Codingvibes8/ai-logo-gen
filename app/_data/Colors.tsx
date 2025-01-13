@@ -1,4 +1,4 @@
-export default[
+const colorPalettes = [
         {
             "name": "Let Us Select",
             "colors": [
@@ -58,8 +58,7 @@ export default[
             "#9c27b0",
             "#ab47bc"
           ]
-        },
-        
-      
-      
-]
+        }
+];
+
+export default colorPalettes;

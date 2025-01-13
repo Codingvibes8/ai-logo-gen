@@ -1,4 +1,4 @@
-export default{
+const Lookup = {
     HeroHeading:'AI Logo Generator',
     HeroSubheading:'Ideal Logos for Apps, Businesses, and Websites',
     HeroDesc:'Effortlessly design unique and professional logos with our AI-powered tool—perfect for apps, businesses, websites, and more',
@@ -42,5 +42,8 @@ export default{
             ],
             button:'Generate Free'
         }
+        
     ],
-}
+};
+
+export default Lookup;

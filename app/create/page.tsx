@@ -12,15 +12,15 @@ import PricingModel from './_components/PricingModel';
 
 interface FormData {
   title: string;
-  desc?: string;
+  desc: string;
   palette?: string;
-  design?: string;
+  design: { title: string; prompt: string };
   idea?: string;
   pricing?: string;
 }
 const CreateLogo: React.FC = () => {
   const [step, setStep] = useState<number>(1);
-  const [formData, setFormData] = useState<FormData>({});
+  const [formData, setFormData] = useState<FormData>({ title: '', desc: '', design: { title: '', prompt: '' } });
 
   const onHandleInputChange = (field: keyof FormData, value: string): void => {
     setFormData(prev => ({
@@ -54,7 +54,7 @@ const CreateLogo: React.FC = () => {
           )}
           {step === 4 && (
               <LogoDesigns
-                  onHandleInputChange={(v: string) => onHandleInputChange('design', v)}
+                  onHandleInputChange={(design: { title: string; image: string }) => onHandleInputChange('design', JSON.stringify(design))}
                   formData={formData}
               />
           )}

@@ -9,13 +9,20 @@ import { Button } from '../../../components/ui/button'
 import { SignInButton, UserButton, useUser } from '@clerk/nextjs'
 import Link from 'next/link'
 
-interface PricingModelProps {
-    formData?: {
-        title?: string;
-    };
+
+interface FormData {
+    title?: string;
 }
 
-const PricingModel: React.FC<PricingModelProps> = ({ formData }) => {
+interface PricingModelProps {
+
+    formData: FormData;
+  
+    onHandleInputChange: (value: string) => void;
+  
+  }
+  
+const PricingModel: React.FC<PricingModelProps> = ({ formData, onHandleInputChange }) => {
 
     const {user}=useUser();
     useEffect(() => {
