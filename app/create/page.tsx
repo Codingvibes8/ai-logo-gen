@@ -1,7 +1,7 @@
 "use client"
 
 import React, { Suspense, useState } from 'react';
-import LogoTitle from './_components/LogoTitle';
+import  LogoTitle  from './_components/LogoTitle';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import LogoDesc from './_components/LogoDesc';

@@ -2,12 +2,13 @@
 
 "use client"
 import React, { useEffect } from 'react'
-import HeadingDesc from './HeadingDesc'
+
 import Lookup from '../../_data/Lookup'
 import Image from 'next/image'
 import { Button } from '../../../components/ui/button'
-import { SignInButton, UserButton, useUser } from '@clerk/nextjs'
+import { SignInButton,  useUser } from '@clerk/nextjs'
 import Link from 'next/link'
+import HeadingDescription from './HeadingDescription'
 
 
 interface FormData {
@@ -33,7 +34,7 @@ const PricingModel: React.FC<PricingModelProps> = ({ formData, onHandleInputChan
 
   return (
     <div className=''>
-        <HeadingDesc
+        <HeadingDescription
         title={Lookup.LogoPricingModelTitle}
         description={Lookup.LogoPricingModelDesc}
         />

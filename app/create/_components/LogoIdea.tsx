@@ -1,10 +1,11 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import HeadingDesc from './HeadingDesc'
+
 import Lookup from '@/app/_data/Lookup'
 import axios from 'axios'
 import Prompt from '@/app/_data/Prompt'
 import { Loader2Icon } from 'lucide-react'
+import HeadingDescription from './HeadingDescription'
 
 interface Props {
   formData: {
@@ -51,7 +52,7 @@ function LogoIdea({ formData, onHandleInputChange }: Props): JSX.Element {
 
   return (
     <div className='my-10'>
-      <HeadingDesc
+      <HeadingDescription
         title={Lookup.LogoIdeaTitle}
         description={Lookup.LogoIdeaDesc}
       />

@@ -2,7 +2,7 @@
 
 "use client"
 import React, { useState } from 'react'
-import HeadingDesc from './HeadingDesc'
+import HeadingDescription from './HeadingDescription'
 import Lookup from '@/app/_data/Lookup'
 import Colors from '@/app/_data/Colors'
 
@@ -18,7 +18,7 @@ function LogoPalette({ onHandleInputChange, formData }: LogoPaletteProps) {
   const [selectedOption, setSelectedOption] = useState<string | undefined>(formData?.palette);
   return (
     <div className='my-10'>
-      <HeadingDesc
+      <HeadingDescription
        title={Lookup.LogoColorPaletteTitle}
        description={Lookup.LogoColorPaletteDesc}
       />

@@ -2,7 +2,7 @@
 "use client"
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import HeadingDesc from './HeadingDesc'
+import HeadingDescription from './HeadingDescription'
 import Lookup from '@/app/_data/Lookup'
 import  LogoDesign  from '@/app/_data/LogoDesign'
 import Image from 'next/image'
@@ -16,7 +16,7 @@ const LogoDesigns: React.FC<LogoDesignsProps> = ({ onHandleInputChange, formData
   const [selectedOption, setSelectedOption] = useState<string | undefined>(formData?.design?.title);
   return (
     <div className='my-10'>
-      <HeadingDesc
+      <HeadingDescription
       title={Lookup.LogoDesignTitle}
       description={Lookup.LogoDesignDesc}
       />

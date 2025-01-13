@@ -3,7 +3,7 @@
 import React from 'react'
 
 
-import HeadingDesc from './HeadingDesc'
+import HeadingDesc from './HeadingDescription'
 import Lookup from '@/app/_data/Lookup'
 
 interface LogoDescProps {

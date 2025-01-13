@@ -7,7 +7,7 @@ interface HeadingDescriptionProps {
   description: string;
 }
 
-const HeadingDesc: FC<HeadingDescriptionProps> = ({ title, description }) => {
+const HeadingDescription: FC<HeadingDescriptionProps> = ({ title, description }) => {
   return (
     <div>
         <h2 className='font-bold text-3xl text-primary'>{title}</h2>
@@ -16,4 +16,4 @@ const HeadingDesc: FC<HeadingDescriptionProps> = ({ title, description }) => {
   );
 };
 
-export default HeadingDesc;
+export default HeadingDescription;
